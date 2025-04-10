@@ -9,4 +9,3 @@ Welcome to the Library Management System project. This project was developed as 
 ## Author
 
 Habyarimana Andy Miguel  
-Student @ Gitega Polytechnic University
