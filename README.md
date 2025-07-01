@@ -1,6 +1,6 @@
 # Library Management System (LMS)
 
-Welcome to the Library Management System project. This project was developed as part of a Java training program and showcases the modeling, design, and implementation of an LMS from scratch.
+Welcome to the Library Management System project. This project was developed as part of a Java course and showcases the modeling, design, and implementation of an LMS from scratch.
 ---
 ## Contents
 - **diagrams/**: Contains all system design diagrams including MCD, MLD, and Class Diagram.
