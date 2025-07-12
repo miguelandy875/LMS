@@ -1,0 +1,34 @@
+2. Update LibrarianDashboardController.java
+
+You now want to store the logged-in librarian and use their data:
+
+public class LibrarianDashboardController {
+
+    @FXML private Label librarianNameLabel;
+    @FXML private StackPane contentPane;
+
+    private Librarian loggedInLibrarian;
+
+    public void setLibrarian(Librarian librarian) {
+        this.loggedInLibrarian = librarian;
+        librarianNameLabel.setText("Welcome, " + librarian.getUserFname());
+    }
+
+    @FXML
+    private void handleLogout() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/lms/view/login.fxml"));
+            Parent loginView = loader.load();
+
+            Stage stage = (Stage) contentPane.getScene().getWindow();
+            stage.setScene(new Scene(loginView));
+            stage.setTitle("Library Login");
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Navigation logic (already included)
+}

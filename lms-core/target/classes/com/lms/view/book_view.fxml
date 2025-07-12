@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.lms.controller.BookController">
+    <Label text="Books"/>
+    <TableView fx:id="bookTable">
+        <columns>
+            <TableColumn text="ID" fx:id="idCol"/>
+            <TableColumn text="Title" fx:id="titleCol"/>
+            <TableColumn text="Author" fx:id="authorCol"/>
+           
+            <TableColumn text="Year" fx:id="yearCol"/>
+        
+            <TableColumn text="Available" fx:id="availableCol"/>
+           
+            <TableColumn text="Pages" fx:id="pagesCol"/>
+        </columns>
+    </TableView>
+    <Button text="Load Books" onAction="#loadBooks"/>
+</VBox>
