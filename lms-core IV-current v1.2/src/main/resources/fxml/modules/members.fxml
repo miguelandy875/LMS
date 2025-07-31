@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.lms.controller.modules.MemberController"
+      spacing="20.0" styleClass="module-container" stylesheets="@../../styles/modules.css">
+   
+   <children>
+      
+      <!-- Header Section -->
+      <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="module-header">
+         <children>
+            <Label text="👥" styleClass="module-icon" />
+            <VBox>
+               <children>
+                  <Label text="Member Management" styleClass="module-title" />
+                  <Label text="Manage library members and their accounts" styleClass="module-subtitle" />
+               </children>
+            </VBox>
+            
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <!-- Statistics Cards -->
+            <HBox spacing="15.0" styleClass="stats-container">
+               <children>
+                  <VBox alignment="CENTER" styleClass="stat-card-mini stat-card-blue">
+                     <children>
+                        <Label fx:id="totalMembersLabel" styleClass="stat-number-mini" text="0" />
+                        <Label text="Total" styleClass="stat-label-mini" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card-mini stat-card-green">
+                     <children>
+                        <Label fx:id="activeMembersLabel" styleClass="stat-number-mini" text="0" />
+                        <Label text="Active" styleClass="stat-label-mini" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card-mini stat-card-red">
+                     <children>
+                        <Label fx:id="inactiveMembersLabel" styleClass="stat-number-mini" text="0" />
+                        <Label text="Inactive" styleClass="stat-label-mini" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      
+      <!-- Search and Filter Section -->
+      <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="filter-section">
+         <children>
+            <!-- Search Field -->
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Search Members" styleClass="filter-label" />
+                  <TextField fx:id="searchField" promptText="Search by name, email, or phone..." 
+                           styleClass="search-field" prefWidth="300.0" />
+               </children>
+            </VBox>
+            
+            <!-- Role Filter -->
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Filter by Role" styleClass="filter-label" />
+                  <ComboBox fx:id="filterRole" styleClass="filter-combo" prefWidth="150.0" />
+               </children>
+            </VBox>
+            
+            <!-- Status Filter -->
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Filter by Status" styleClass="filter-label" />
+                  <ComboBox fx:id="filterStatus" styleClass="filter-combo" prefWidth="150.0" />
+               </children>
+            </VBox>
+            
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <!-- Action Buttons -->
+            <HBox spacing="10.0" styleClass="action-buttons">
+               <children>
+                  <Button fx:id="addMemberBtn" mnemonicParsing="false" onAction="#handleAddMember" 
+                          styleClass="btn-primary" text="➕ Add Member" />
+                  <Button fx:id="refreshBtn" mnemonicParsing="false" onAction="#handleRefresh" 
+                          styleClass="btn-secondary" text="🔄 Refresh" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+         </padding>
+      </HBox>
+      
+      <!-- Members Table Section -->
+      <VBox spacing="10.0" styleClass="table-section" VBox.vgrow="ALWAYS">
+         <children>
+            
+            <!-- Table Actions -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="table-actions">
+               <children>
+                  <Label text="Select a member to perform actions:" styleClass="table-info" />
+                  
+                  <Region HBox.hgrow="ALWAYS" />
+                  
+                  <Button fx:id="viewMemberBtn" mnemonicParsing="false" onAction="#handleViewMember" 
+                          styleClass="btn-info" text="👁 View Details" />
+                  <Button fx:id="editMemberBtn" mnemonicParsing="false" onAction="#handleEditMember" 
+                          styleClass="btn-warning" text="✏️ Edit" />
+                  <Button fx:id="deleteMemberBtn" mnemonicParsing="false" onAction="#handleDeleteMember" 
+                          styleClass="btn-danger" text="🗑️ Delete" />
+               </children>
+            </HBox>
+            
+            <!-- Members Table -->
+            <TableView fx:id="membersTable" styleClass="data-table" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+                  <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Full Name" />
+                  <TableColumn fx:id="emailColumn" prefWidth="250.0" text="Email" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="150.0" text="Phone" />
+                  <TableColumn fx:id="roleColumn" prefWidth="100.0" text="Role" />
+                  <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                  <TableColumn fx:id="createdColumn" prefWidth="130.0" text="Created" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+      
+   </children>
+</VBox>

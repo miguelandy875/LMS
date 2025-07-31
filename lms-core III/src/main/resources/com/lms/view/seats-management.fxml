@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" spacing="20.0" style="-fx-background-color: #f7fafc;">
+   <children>
+      <!-- Header Section -->
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);">
+         <children>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 24px; -fx-text-fill: #2d3748; -fx-font-weight: bold;" text="Seats Management" />
+                  <Label style="-fx-font-size: 14px; -fx-text-fill: #718096;" text="Manage reading area seats, handle reservations, and monitor seat availability." />
+               </children>
+            </VBox>
+            
+            <Button mnemonicParsing="false" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 8px; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 10px 20px;" text="🪑 Add New Seat">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </HBox>
+      
+      <!-- Statistics Cards -->
+      <HBox spacing="15.0">
+         <children>
+            <!-- Total Seats Card -->
+            <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.1, 0, 2);" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 28px; -fx-text-fill: #3182ce; -fx-font-weight: bold;" text="60" />
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #718096; -fx-font-weight: 500;" text="Total Seats" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Available Card -->
+            <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.1, 0, 2);" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 28px; -fx-text-fill: #38a169; -fx-font-weight: bold;" text="45" />
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #718096; -fx-font-weight: 500;" text="Available" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Occupied Card -->
+            <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.1, 0, 2);" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 28px; -fx-text-fill: #e53e3e; -fx-font-weight: bold;" text="12" />
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #718096; -fx-font-weight: 500;" text="Occupied" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Reserved Card -->
+            <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.1, 0, 2);" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 28px; -fx-text-fill: #d69e2e; -fx-font-weight: bold;" text="3" />
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #718096; -fx-font-weight: 500;" text="Reserved" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <!-- Main Content Area -->
+      <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- Seat Map Visual -->
+            <VBox spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label style="-fx-font-size: 16px; -fx-text-fill: #2d3748; -fx-font-weight: bold;" text="Reading Area Layout" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <!-- Legend -->
+                        <HBox spacing="15.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                 <children>
+                                    <Label style="-fx-background-color: #38a169; -fx-pref-width: 15px; -fx-pref-height: 15px; -fx-background-radius: 3px;" />
+                                    <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Available" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                 <children>
+                                    <Label style="-fx-background-color: #e53e3e; -fx-pref-width: 15px; -fx-pref-height: 15px; -fx-background-radius: 3px;" />
+                                    <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Occupied" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                 <children>
+                                    <Label style="-fx-background-color: #d69e2e; -fx-pref-width: 15px; -fx-pref-height: 15px; -fx-background-radius: 3px;" />
+                                    <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Reserved" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  
+                  <!-- Seat Grid - Placeholder for actual seat layout -->
+                  <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox alignment="CENTER" spacing="20.0" style="-fx-padding: 20px;">
+                           <children>
+                              <Label style="-fx-font-size: 48px; -fx-text-fill: #cbd5e0;" text="🪑" />
+                              <Label style="-fx-font-size: 16px; -fx-text-fill: #a0aec0; -fx-text-alignment: center;" text="Interactive Seat Map" textAlignment="CENTER" />
+                              <Label style="-fx-font-size: 12px; -fx-text-fill: #cbd5e0; -fx-text-alignment: center;" text="Click on seats to view details or make reservations" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Reservations Panel -->
+            <VBox spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);" HBox.hgrow="NEVER">
+               <children>
+                  <Label style="-fx-font-size: 16px; -fx-text-fill: #2d3748; -fx-font-weight: bold;" text="Active Reservations" />
+                  
+                  <!-- Reservations List -->
+                  <VBox spacing="10.0">
+                     <children>
+                        <!-- Reservation Item 1 -->
+                        <VBox spacing="5.0" style="-fx-background-color: #f7fafc; -fx-background-radius: 8px; -fx-padding: 12px;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-background-color: #d69e2e; -fx-text-fill: white; -fx-background-radius: 12px; -fx-padding: 4px 8px; -fx-font-size: 10px; -fx-font-weight: bold;" text="A-15" />
+                                    <Label style="-fx-font-size: 13px; -fx-text-fill: #2d3748; -fx-font-weight: 500;" text="Emma Brown" />
+                                 </children>
+                              </HBox>
+                              <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Reserved until: 4:30 PM" />
+                              <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Time left: 2h 15m" />
+                           </children>
+                        </VBox>
+                        
+                        <!-- Reservation Item 2 -->
+                        <VBox spacing="5.0" style="-fx-background-color: #f7fafc; -fx-background-radius: 8px; -fx-padding: 12px;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-background-color: #d69e2e; -fx-text-fill: white; -fx-background-radius: 12px; -fx-padding: 4px 8px; -fx-font-size: 10px; -fx-font-weight: bold;" text="B-08" />
+                                    <Label style="-fx-font-size: 13px; -fx-text-fill: #2d3748; -fx-font-weight: 500;" text="Alex Smith" />
+                                 </children>
+                              </HBox>
+                              <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Reserved until: 6:00 PM" />
+                              <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Time left: 3h 45m" />
+                           </children>
+                        </VBox>
+                        
+                        <!-- Reservation Item 3 -->
+                        <VBox spacing="5.0" style="-fx-background-color: #f7fafc; -fx-background-radius: 8px; -fx-padding: 12px;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-background-color: #d69e2e; -fx-text-fill: white; -fx-background-radius: 12px; -fx-padding: 4px 8px; -fx-font-size: 10px; -fx-font-weight: bold;" text="C-12" />
+                                    <Label style="-fx-font-size: 13px; -fx-text-fill: #2d3748; -fx-font-weight: 500;" text="Lisa Wilson" />
+                                 </children>
+                              </HBox>
+                              <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Reserved until: 5:15 PM" />
+                              <Label style="-fx-font-size: 11px; -fx-text-fill: #718096;" text="Time left: 3h 00m" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  
+                  <Button mnemonicParsing="false" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 6px; -fx-cursor: hand; -fx-font-size: 12px;" text="+ New Reservation" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

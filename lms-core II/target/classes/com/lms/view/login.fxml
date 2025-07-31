@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.LoginController">
+   <children>
+      <!-- Background Container -->
+      <HBox prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+         <children>
+            <!-- Left Side - Welcome Panel -->
+            <VBox alignment="CENTER" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #000; -fx-backdrop-filter: blur(10px);">
+               <children>
+                  <!-- Logo/Icon -->
+                  <VBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <!-- You can replace this with your library logo -->
+                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <!-- Add your logo here or use a FontAwesome icon -->
+                           </image>
+                        </ImageView>
+                        
+                        <!-- Library Icon as fallback -->
+                        <Label style="-fx-font-family: 'Font Awesome 5 Free'; -fx-font-size: 80px; -fx-text-fill: white; -fx-font-weight: 900;" text="" />
+                        
+                        <Label style="-fx-font-size: 32px; -fx-text-fill: white; -fx-font-weight: bold;" text="Library Management" />
+                        <Label style="-fx-font-size: 24px; -fx-text-fill: rgba(255, 255, 255, 0.8);" text="System" />
+                     </children>
+                  </VBox>
+                  
+                  <Region VBox.vgrow="ALWAYS" />
+                  
+                  <!-- Welcome Message -->
+                  <VBox alignment="CENTER" spacing="15.0">
+                     <children>
+                        <Label style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: 500;" text="Welcome Back!" />
+                        <Label style="-fx-font-size: 14px; -fx-text-fill: rgba(255, 255, 255, 0.7); -fx-text-alignment: center;" text="Manage your library efficiently&#10;with our comprehensive system" textAlignment="CENTER" wrapText="true" />
+                     </children>
+                  </VBox>
+                  
+                  <Region VBox.vgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="60.0" left="40.0" right="40.0" top="60.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Right Side - Login Form -->
+            <VBox alignment="CENTER" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #333;">
+               <children>
+                  <!-- Login Form Container -->
+                  <VBox alignment="CENTER" maxWidth="400.0" spacing="30.0" style="-fx-background-color: white; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0.5, 0, 5);" VBox.vgrow="ALWAYS">
+                     <children>
+                        <!-- Header -->
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-size: 28px; -fx-text-fill: #2d3748; -fx-font-weight: bold;" text="Sign In" />
+                              <Label style="-fx-font-size: 14px; -fx-text-fill: #718096;" text="Enter your credentials to access the system" />
+                           </children>
+                        </VBox>
+                        
+                        <!-- Login Form -->
+                        <VBox spacing="20.0">
+                           <children>
+                              <!-- Email Field -->
+                              <VBox spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #4a5568; -fx-font-weight: 500;" text="Email Address" />
+                                    <TextField fx:id="emailField" promptText="Enter your email" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-padding: 12px 16px; -fx-font-size: 14px;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              
+                              <!-- Password Field -->
+                              <VBox spacing="8.0">
+                                 <children>
+                                    <Label style="-fx-font-size: 14px; -fx-text-fill: #4a5568; -fx-font-weight: 500;" text="Password" />
+                                    <PasswordField fx:id="passwordField" promptText="Enter your password" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-padding: 12px 16px; -fx-font-size: 14px;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </PasswordField>
+                                 </children>
+                              </VBox>
+                              
+                              <!-- Status Label -->
+                              <Label fx:id="statusLabel" style="-fx-font-size: 13px; -fx-text-alignment: center;" textAlignment="CENTER" wrapText="true" />
+                              
+                              <!-- Login Button -->
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -fx-text-fill: white; -fx-background-radius: 8px; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand;" text="Sign In">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <ProgressIndicator fx:id="loadingIndicator" maxHeight="25.0" maxWidth="25.0" visible="false" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        
+                        <!-- Footer Links -->
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Separator maxWidth="300.0" style="-fx-background-color: #e2e8f0;" />
+                              <HBox alignment="CENTER" spacing="20.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#handleForgotPassword" style="-fx-background-color: transparent; -fx-text-fill: #667eea; -fx-underline: true; -fx-cursor: hand; -fx-font-size: 13px;" text="Forgot Password?" />
+                                    <Label style="-fx-text-fill: #cbd5e0;" text="|" />
+                                    <Button mnemonicParsing="false" onAction="#handleRegister" style="-fx-background-color: transparent; -fx-text-fill: #667eea; -fx-underline: true; -fx-cursor: hand; -fx-font-size: 13px;" text="Need Help?" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

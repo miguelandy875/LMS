@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" style="-fx-background-color: #f7fafc;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <!-- Header Section -->
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);">
+         <children>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 24px; -fx-text-fill: #2d3748; -fx-font-weight: bold;" text="Users Management" />
+                  <Label style="-fx-font-size: 14px; -fx-text-fill: #718096;" text="Manage library members, view their profiles, and track their borrowing history." />
+               </children>
+            </VBox>
+            
+            <Button mnemonicParsing="false" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 8px; -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 10px 20px;" text="+ Add New Member">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </HBox>
+      
+      <!-- Search and Filter Section -->
+      <HBox spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);">
+         <children>
+            <!-- Search Field -->
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #4a5568; -fx-font-weight: 500;" text="Search Users" />
+                  <TextField promptText="Search by name, email, or phone..." style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-padding: 8px 12px;" />
+               </children>
+            </VBox>
+            
+            <!-- Role Filter -->
+            <VBox spacing="5.0">
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #4a5568; -fx-font-weight: 500;" text="User Role" />
+                  <ComboBox prefWidth="120.0" promptText="All Roles" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 6px; -fx-background-radius: 6px;" />
+               </children>
+            </VBox>
+            
+            <!-- Status Filter -->
+            <VBox spacing="5.0">
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #4a5568; -fx-font-weight: 500;" text="Status" />
+                  <ComboBox prefWidth="120.0" promptText="All Status" style="-fx-background-color: #f7fafc; -fx-border-color: #e2e8f0; -fx-border-radius: 6px; -fx-background-radius: 6px;" />
+               </children>
+            </VBox>
+            
+            <!-- Search Button -->
+            <VBox alignment="BOTTOM_CENTER">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 6px; -fx-cursor: hand; -fx-padding: 8px 16px;" text="Search" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+         </padding>
+      </HBox>
+      
+      <!-- Users Table Section -->
+      <VBox style="-fx-background-color: white; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.1, 0, 2);" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- Table Header -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label style="-fx-font-size: 16px; -fx-text-fill: #2d3748; -fx-font-weight: bold;" text="Registered Users" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #718096;" text="Total: 342 members" />
+               </children>
+            </HBox>
+            
+            <!-- Table -->
+            <TableView style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn prefWidth="60.0" text="ID" />
+                  <TableColumn prefWidth="120.0" text="First Name" />
+                  <TableColumn prefWidth="120.0" text="Last Name" />
+                  <TableColumn prefWidth="180.0" text="Email" />
+                  <TableColumn prefWidth="120.0" text="Phone" />
+                  <TableColumn prefWidth="80.0" text="Role" />
+                  <TableColumn prefWidth="80.0" text="Status" />
+                  <TableColumn prefWidth="100.0" text="Joined" />
+                  <TableColumn prefWidth="120.0" text="Actions" />
+               </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

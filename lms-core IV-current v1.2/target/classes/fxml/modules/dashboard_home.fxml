@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.lms.controller.modules.DashboardHomeController"
+            styleClass="home-container" stylesheets="@../../styles/modules.css">
+   
+   <content>
+      <VBox spacing="25.0" styleClass="home-content">
+         <children>
+            
+            <!-- Welcome Section -->
+            <VBox alignment="CENTER_LEFT" spacing="8.0" styleClass="welcome-section">
+               <children>
+                  <Label fx:id="welcomeLabel" styleClass="welcome-title" text="Good Morning, User!" />
+                  <Label fx:id="dateTimeLabel" styleClass="welcome-subtitle" text="Today's Date" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Statistics Cards -->
+            <GridPane hgap="20.0" vgap="20.0" styleClass="stats-grid">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  
+                  <!-- Books Stats -->
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-blue" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <children>
+                        <Label text="📚" styleClass="stat-icon" />
+                        <Label fx:id="totalBooksLabel" styleClass="stat-number" text="1,245" />
+                        <Label text="Total Books" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-green" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                     <children>
+                        <Label text="✅" styleClass="stat-icon" />
+                        <Label fx:id="availableBooksLabel" styleClass="stat-number" text="1,089" />
+                        <Label text="Available Books" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-orange" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                     <children>
+                        <Label text="📖" styleClass="stat-icon" />
+                        <Label fx:id="issuedBooksLabel" styleClass="stat-number" text="156" />
+                        <Label text="Issued Books" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-purple" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <children>
+                        <Label text="👥" styleClass="stat-icon" />
+                        <Label fx:id="totalMembersLabel" styleClass="stat-number" text="2,543" />
+                        <Label text="Total Members" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-teal" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="🔄" styleClass="stat-icon" />
+                        <Label fx:id="activeLoansLabel" styleClass="stat-number" text="156" />
+                        <Label text="Active Loans" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-red" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="⚠️" styleClass="stat-icon" />
+                        <Label fx:id="overdueLoansLabel" styleClass="stat-number" text="12" />
+                        <Label text="Overdue Books" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-indigo" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="📝" styleClass="stat-icon" />
+                        <Label fx:id="reservationsLabel" styleClass="stat-number" text="23" />
+                        <Label text="Reservations" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox alignment="CENTER" styleClass="stat-card stat-card-amber" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="🪑" styleClass="stat-icon" />
+                        <Label fx:id="occupiedSeatsLabel" styleClass="stat-number" text="45/80" />
+                        <Label text="Occupied Seats" styleClass="stat-label" />
+                     </children>
+                  </VBox>
+                  
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+               </padding>
+            </GridPane>
+            
+            <!-- Chart Section -->
+            <VBox spacing="15.0" styleClass="chart-section">
+               <children>
+                  <Label text="📊 Library Statistics Overview" styleClass="section-title" />
+                  
+                  <HBox spacing="30.0" alignment="CENTER">
+                     <children>
+                        <!-- Pie Chart -->
+                        <VBox alignment="CENTER" styleClass="chart-container">
+                           <children>
+                              <PieChart fx:id="statisticsChart" prefHeight="300.0" prefWidth="400.0" 
+                                      styleClass="statistics-chart" />
+                           </children>
+                        </VBox>
+                        
+                        <!-- Quick Actions -->
+                        <VBox spacing="15.0" styleClass="quick-actions">
+                           <children>
+                              <Label text="Quick Actions" styleClass="quick-actions-title" />
+                              <Button fx:id="addMemberBtn" styleClass="quick-action-btn quick-action-primary" 
+                                    text="➕ Add New Member" onAction="#handleAddMember" />
+                              <Button fx:id="addBookBtn" styleClass="quick-action-btn quick-action-success" 
+                                    text="📚 Add New Book" onAction="#handleAddBook" />
+                              <Button fx:id="processLoanBtn" styleClass="quick-action-btn quick-action-info" 
+                                    text="🔄 Process Loan" onAction="#handleProcessLoan" />
+                              <Button fx:id="makeReservationBtn" styleClass="quick-action-btn quick-action-warning" 
+                                    text="📝 Make Reservation" onAction="#handleMakeReservation" />
+                              <Button fx:id="viewReportsBtn" styleClass="quick-action-btn quick-action-secondary" 
+                                    text="📊 View Reports" onAction="#handleViewReports" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
+               </padding>
+            </VBox>
+            
+            <!-- Recent Activity Section -->
+            <VBox spacing="15.0" styleClass="activity-section">
+               <children>
+                  <Label text="📋 Recent Activity" styleClass="section-title" />
+                  
+                  <VBox spacing="10.0" styleClass="activity-list">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="activity-item">
+                           <children>
+                              <Label text="👤" styleClass="activity-icon" />
+                              <VBox>
+                                 <children>
+                                    <Label text="New member registered: Alice Johnson" styleClass="activity-text" />
+                                    <Label text="2 minutes ago" styleClass="activity-time" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="activity-item">
+                           <children>
+                              <Label text="📖" styleClass="activity-icon" />
+                              <VBox>
+                                 <children>
+                                    <Label text="Book returned: 'The Great Gatsby' by Bob Smith" styleClass="activity-text" />
+                                    <Label text="15 minutes ago" styleClass="activity-time" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="activity-item">
+                           <children>
+                              <Label text="🔄" styleClass="activity-icon" />
+                              <VBox>
+                                 <children>
+                                    <Label text="New loan issued: 'To Kill a Mockingbird' to Charlie Brown" styleClass="activity-text" />
+                                    <Label text="32 minutes ago" styleClass="activity-time" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="activity-item">
+                           <children>
+                              <Label text="📝" styleClass="activity-icon" />
+                              <VBox>
+                                 <children>
+                                    <Label text="Book reservation: 'Pride and Prejudice' by Diana Wilson" styleClass="activity-text" />
+                                    <Label text="1 hour ago" styleClass="activity-time" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
+               </padding>
+            </VBox>
+            
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,14 @@
+com\lms\controller\DashboardHomeController.class
+com\lms\service\AuthenticationService.class
+com\lms\util\DatabaseUtil.class
+com\lms\dao\UserDAO.class
+com\lms\model\User.class
+com\lms\controller\ModulePlaceholderController.class
+com\lms\controller\LoginController.class
+com\lms\util\DatabaseSetup.class
+com\lms\util\SessionManager.class
+com\lms\controller\NavigationController.class
+com\lms\dao\GenericDAO.class
+com\lms\util\DialogHelper.class
+com\lms\LMSApplication.class
+com\lms\controller\DashboardController.class
