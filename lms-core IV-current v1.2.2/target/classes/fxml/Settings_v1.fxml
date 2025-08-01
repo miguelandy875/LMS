@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="com.lms.controller.SettingsController"
+style="-fx-background-color: #1a202c;" spacing="20.0">
+
+   <children>
+
+
+  <!-- Settings Header -->
+  <VBox alignment="CENTER_LEFT" style="-fx-background-color: #2d3748; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.4, 0, 2);">
+     <children>
+        <HBox alignment="CENTER_LEFT" spacing="15.0">
+           <children>
+              <Label style="-fx-font-size: 24px; -fx-text-fill: #32CD32;" text="⚙" />
+              <VBox>
+                 <children>
+                    <Label style="-fx-font-size: 20px; -fx-text-fill: white; -fx-font-weight: bold;" text="Settings" />
+                    <Label style="-fx-font-size: 12px; -fx-text-fill: rgba(255, 255, 255, 0.7);" text="Manage your account and system preferences" />
+                 </children>
+              </VBox>
+           </children>
+        </HBox>
+     </children>
+     <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+     </padding>
+  </VBox>
+  
+  <!-- Settings Content -->
+  <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;">
+     <content>
+        <VBox spacing="15.0">
+           <children>
+              
+              <!-- Account Settings Section -->
+              <VBox spacing="10.0" style="-fx-background-color: #2d3748; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.3, 0, 1);">
+                 <children>
+                    <!-- Section Header -->
+                    <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: rgba(50, 205, 50, 0.1); -fx-background-radius: 10px 10px 0 0;">
+                       <children>
+                          <Label style="-fx-font-size: 16px; -fx-text-fill: #32CD32;" text="👤" />
+                          <Label style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" text="Account Settings" />
+                       </children>
+                       <padding>
+                          <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                       </padding>
+                    </HBox>
+                    
+                    <!-- Account Options -->
+                    <VBox spacing="8.0">
+                       <children>
+                          <!-- Profile Button -->
+                          <Button fx:id="profileButton" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleProfile" prefHeight="45.0" style="-fx-background-color: transparent; -fx-text-fill: #a0aec0;  -fx-padding: 12px 16px; -fx-cursor: hand; -fx-font-size: 14px; -fx-border-color: rgba(160, 174, 192, 0.2); -fx-border-width: 1px; -fx-border-radius: 8px;" text="👤  View/Edit Profile" />
+                          
+                          <!-- Change Password Button -->
+                          <Button fx:id="changePasswordButton" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleChangePassword" prefHeight="45.0" style="-fx-background-color: transparent; -fx-text-fill: #a0aec0;  -fx-padding: 12px 16px; -fx-cursor: hand; -fx-font-size: 14px; -fx-border-color: rgba(160, 174, 192, 0.2); -fx-border-width: 1px; -fx-border-radius: 8px;" text="🔒  Change Password" />
+                       </children>
+                       <padding>
+                          <Insets bottom="10.0" left="15.0" right="15.0" top="5.0" />
+                       </padding>
+                    </VBox>
+                 </children>
+              </VBox>
+              
+              <!-- System Settings Section -->
+              <VBox spacing="10.0" style="-fx-background-color: #2d3748; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.3, 0, 1);">
+                 <children>
+                    <!-- Section Header -->
+                    <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: rgba(50, 205, 50, 0.1); -fx-background-radius: 10px 10px 0 0;">
+                       <children>
+                          <Label style="-fx-font-size: 16px; -fx-text-fill: #32CD32;" text="🖥️" />
+                          <Label style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" text="System Preferences" />
+                       </children>
+                       <padding>
+                          <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                       </padding>
+                    </HBox>
+                    
+                    <!-- System Options -->
+                    <VBox spacing="15.0">
+                       <children>
+                          
+                          <!-- Theme Selection -->
+                          <HBox alignment="CENTER_LEFT" spacing="15.0">
+                             <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: white; -fx-min-width: 120px;" text="🎨  Theme:" />
+                                <ComboBox fx:id="themeComboBox" prefWidth="150.0" style="-fx-background-color: #4a5568; -fx-text-fill: white;" />
+                             </children>
+                          </HBox>
+                          
+                          <!-- Language Selection -->
+                          <HBox alignment="CENTER_LEFT" spacing="15.0">
+                             <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: white; -fx-mincreatedat: 120px;" text="🌐  Language:" />
+                                <ComboBox fx:id="languageComboBox" prefWidth="150.0" style="-fx-background-color: #4a5568; -fx-text-fill: white;" />
+                             </children>
+                          </HBox>
+                          
+                          <!-- Auto Logout Time -->
+                          <HBox alignment="CENTER_LEFT" spacing="15.0">
+                             <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: white; -fx-mincreatedat: 120px;" text="⏰  Auto Logout:" />
+                                <ComboBox fx:id="autoLogoutComboBox" prefWidth="150.0" style="-fx-background-color: #4a5568; -fx-text-fill: white;" />
+                                <Label style="-fx-font-size: 12px; -fx-text-fill: rgba(255, 255, 255, 0.7);" text="minutes" />
+                             </children>
+                          </HBox>
+                          
+                          <!-- Notifications -->
+                          <HBox alignment="CENTER_LEFT" spacing="15.0">
+                             <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: white; -fx-min-width: 120px;" text="🔔  Notifications:" />
+                                <CheckBox fx:id="notificationsCheckBox" style="-fx-text-fill: #a0aec0;" text="Enable system notifications" />
+                             </children>
+                          </HBox>
+                          
+                       </children>
+                       <padding>
+                          <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
+                       </padding>
+                    </VBox>
+                 </children>
+              </VBox>
+              
+              <!-- Application Info Section -->
+              <VBox spacing="10.0" style="-fx-background-color: #2d3748; -fx-background-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0.3, 0, 1);">
+                 <children>
+                    <!-- Section Header -->
+                    <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: rgba(50, 205, 50, 0.1); -fx-background-radius: 10px 10px 0 0;">
+                       <children>
+                          <Label style="-fx-font-size: 16px; -fx-text-fill: #32CD32;" text="ℹ️" />
+                          <Label style="-fx-font-size: 16px; -fx-text-fill: white; -fx-font-weight: bold;" text="Application Information" />
+                       </children>
+                       <padding>
+                          <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                       </padding>
+                    </HBox>
+                    
+                    <!-- App Info -->
+                    <VBox spacing="8.0">
+                       <children>
+                          <!-- About Button -->
+                          <Button fx:id="aboutButton" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAbout" prefHeight="45.0" style="-fx-background-color: transparent; -fx-text-fill: #a0aec0;  -fx-padding: 12px 16px; -fx-cursor: hand; -fx-font-size: 14px; -fx-border-color: rgba(160, 174, 192, 0.2); -fx-border-width: 1px; -fx-border-radius: 8px;" text="ℹ️  About Application" />
+                          
+                          <!-- Version Info -->
+                          <HBox alignment="CENTER_LEFT" spacing="15.0">
+                             <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: white; -fx-min-width: 120px;" text="📋  Version:" />
+                                <Label fx:id="versionLabel" style="-fx-font-size: 14px; -fx-text-fill: #32CD32; -fx-font-weight: bold;" text="v1.0.0" />
+                             </children>
+                          </HBox>
+                          
+                          <!-- Last Updated -->
+                          <HBox alignment="CENTER_LEFT" spacing="15.0">
+                             <children>
+                                <Label style="-fx-font-size: 14px; -fx-text-fill: white; -fx-min-width: 120px;" text="📅  Last Updated:" />
+                                <Label fx:id="lastUpdatedLabel" style="-fx-font-size: 14px; -fx-text-fill: rgba(255, 255, 255, 0.7);" text="January 2024" />
+                             </children>
+                          </HBox>
+                       </children>
+                       <padding>
+                          <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
+                       </padding>
+                    </VBox>
+                 </children>
+              </VBox>
+              
+              <!-- Action Buttons -->
+              <HBox alignment="CENTER" spacing="15.0">
+                 <children>
+                    <Button fx:id="saveSettingsButton" mnemonicParsing="false" onAction="#handleSaveSettings" prefWidth="120.0" style="-fx-background-color: rgba(50, 205, 50, 0.8); -fx-text-fill: white;  -fx-padding: 10px 20px; -fx-cursor: hand; -fx-font-weight: bold;" text="💾  Save" />
+                    
+                    <Button fx:id="resetSettingsButton" mnemonicParsing="false" onAction="#handleResetSettings" prefWidth="120.0" style="-fx-background-color: rgba(255, 99, 71, 0.8); -fx-text-fill: white;  -fx-padding: 10px 20px; -fx-cursor: hand; -fx-font-weight: bold;" text="🔄  Reset" />
+                 </children>
+              </HBox>
+              
+           </children>
+        </VBox>
+     </content>
+  </ScrollPane>
+
+
+   </children>
+
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+
+</VBox>
