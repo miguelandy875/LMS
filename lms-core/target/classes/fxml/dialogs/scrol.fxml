@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<ScrollPane blendMode="OVERLAY" styleClass="dialog-container" stylesheets="@../../styles/dialogs.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.controller.dialogs.LoanDetailsDialogController">
+   
+<VBox spacing="20.0" >
+   
+   <!-- Dialog Header -->
+   <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="dialog-header">
+      <children>
+         <Label styleClass="dialog-icon" text="📋" />
+         <VBox>
+            <children>
+               <Label styleClass="dialog-title" text="Loan Details" />
+               <Label fx:id="loanIdLabel" styleClass="dialog-subtitle" text="Loan ID: #12345" />
+            </children>
+         </VBox>
+         <Region HBox.hgrow="ALWAYS" />
+         <Label fx:id="statusBadge" styleClass="btn-primary" text="ACTIVE" />
+      </children>
+   </HBox>
+   
+   <!-- Loan Information Content -->
+   <VBox spacing="25.0" styleClass="dialog-content">
+      <children>
+         
+         <!-- Member Information Section -->
+         <VBox spacing="15.0" styleClass="info-section">
+            <children>
+               <Label styleClass="section-title" text="📖 Member Information" />
+               <GridPane hgap="20.0" styleClass="info-grid" vgap="10.0">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="form-label" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="memberNameLabel" styleClass="info-value" text="John Doe" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     
+                     <Label styleClass="form-label" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                     <Label fx:id="memberEmailLabel" styleClass="info-value" text="john.doe@email.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+               </GridPane>
+            </children>
+         </VBox>
+         
+         <!-- Book Information Section -->
+         <VBox spacing="15.0" styleClass="info-section">
+            <children>
+               <Label styleClass="section-title" text="📚 Book Information" />
+               <GridPane hgap="20.0" styleClass="info-grid" vgap="10.0">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="form-label" text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="bookTitleLabel" styleClass="info-value" text="Sample Book Title" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     
+                     <Label styleClass="form-label" text="Author(s):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                     <Label fx:id="bookAuthorsLabel" styleClass="info-value" text="Author Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+               </GridPane>
+            </children>
+         </VBox>
+         
+         <!-- Loan Details Section -->
+         <VBox spacing="15.0" styleClass="info-section">
+            <children>
+               <Label styleClass="section-title" text="📅 Loan Details" />
+               <GridPane hgap="20.0" styleClass="info-grid" vgap="10.0">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="form-label" text="Issue Date:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="issueDateLabel" styleClass="info-value" text="Jan 15, 2024" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     
+                     <Label styleClass="form-label" text="Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                     <Label fx:id="dueDateLabel" styleClass="info-value" text="Jan 29, 2024" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     
+                     <Label styleClass="form-label" text="Days Left:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                     <Label fx:id="daysLeftLabel" styleClass="info-value" text="5 days" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     
+                     <Label styleClass="form-label" text="Issued By:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                     <Label fx:id="librarianLabel" styleClass="info-value" text="Jane Librarian" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+               </GridPane>
+            </children>
+         </VBox>
+         
+         <!-- Fine Information Section (shown only if applicable) -->
+         <VBox fx:id="fineSection" spacing="15.0" styleClass="info-section, warning-section">
+            <children>
+               <Label styleClass="section-title" text="💰 Fine Information" />
+               <GridPane hgap="20.0" styleClass="info-grid" vgap="10.0">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="form-label" text="Days Overdue:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="overdueLabel" styleClass="info-value-warning" text="3 days" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                          <Label styleClass="form-label" text="Fine Amount:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                  
+
+                  </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+               </GridPane>
+            </children>
+         </VBox>
+         
+      </children>
+   </VBox>
+   
+   <!-- Dialog Buttons -->
+   <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="dialog-buttons">
+      <children>
+         <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleClose" prefHeight="40.0" prefWidth="100.0" styleClass="btn-secondary" text="Close" />
+      </children>
+   </HBox>
+ 
+   
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</VBox>
+</ScrollPane>

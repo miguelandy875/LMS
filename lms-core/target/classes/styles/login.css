@@ -1,0 +1,192 @@
+/* Root styling */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Main container */
+.login-container {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2d3748 0%, #23272e 100%);
+}
+
+.background-panel {
+    -fx-background-color: transparent;
+}
+
+/* Left panel styling */
+.left-panel {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2d3748 0%, #23272e 100%);
+    -fx-background-radius: 0;
+}
+
+.app-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 20, 0.5, 0, 4);
+}
+
+
+
+
+.app-subtitle {
+    -fx-font-size: 14px;
+    -fx-fill: #E0E0E0;
+}
+
+.features-list {
+    -fx-spacing: 15;
+}
+
+.feature-check {
+    -fx-text-fill: #4CAF50;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.feature-text {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Right panel styling */
+.right-panel {
+    -fx-background-color:#23272e;
+     /* #f8f9fa */
+    -fx-background-radius: 0;
+}
+    .progress-indicator {
+        -fx-accent: #008000; /* Sets the accent color to green */
+    }
+/* Login card */
+.login-card {
+       /* -fx-background-color: linear-gradient(to bottom, #3a3f47, #2c3137); */
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3a3f47 0%, #2c3137 100%);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0, 0, 5);
+    -fx-max-width: 400;
+    -fx-min-width: 400;
+}
+
+/* Typography */
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #e0e0e0;
+}
+
+.login-subtitle {
+    -fx-font-size: 14px;
+    -fx-fill: #d0cfcf;
+}
+
+/* Form styling */
+.form-fields {
+    -fx-spacing: 20;
+}
+
+.field-label {
+    -fx-text-fill: #dad7d7;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.form-field {
+    -fx-pref-height: 45;
+    -fx-font-size: 14px;
+    -fx-background-color: #191c1f;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 0 15 0 15;
+}
+
+.form-field:focused {
+    -fx-border-color: #ededed;
+     -fx-text-fill: #dad7d7;
+    -fx-border-width: 2;
+    -fx-background-color: #1c2023;
+}
+
+/* Status label */
+.status-label {
+    -fx-text-fill: #e90d23;
+    -fx-font-size: 13px;
+    -fx-min-height: 20;
+}
+
+/* Button styling */
+.button-container {
+    -fx-spacing: 15;
+}
+
+.login-button {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2d3748 0%, #23272e 100%);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,  #404146 0%, #3f4c62 100%);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0, 0, 3);
+}
+
+.login-button:pressed {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,  #323336 0%, #090a0a 100%);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 1);
+}
+
+.login-button:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
+
+.exit-button {
+    -fx-background-color: linear-gradient(from 100% 100% to 0% 0%, #e0d7d7 0%, #bbabab 100%);
+    -fx-text-fill: #2c2e2f;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.exit-button:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #495057;
+    -fx-border-color: #adb5bd;
+}
+
+.exit-button:pressed {
+    -fx-background-color: #e9ecef;
+}
+
+/* Progress indicator */
+.progress-indicator {
+    -fx-progress-color: #23272e;
+}
+
+.progress-indicator .percentage {
+    -fx-fill: transparent;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .login-card {
+        -fx-max-width: 350;
+        -fx-min-width: 350;
+    }
+    
+    .app-title {
+        -fx-font-size: 24px;
+    }
+    
+    .login-title {
+        -fx-font-size: 20px;
+    }
+}
