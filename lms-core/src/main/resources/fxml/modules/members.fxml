@@ -139,8 +139,8 @@
          
                    <Button fx:id="refreshBtn" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="35.0" styleClass="btn-secondary" text="🔄" />
                   <Button fx:id="viewMemberBtn" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleViewMember" prefHeight="35.0" styleClass="btn-secondary" text="👁" />
-                  <Button fx:id="editMemberBtn" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleEditMember" prefHeight="35.0" styleClass="btn-secondary" text="🖊" />
-                  <Button fx:id="deleteMemberBtn" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleDeleteMember" prefHeight="35.0" styleClass="btn-secondary" text="🗑" />
+                  <Button fx:id="editMemberBtn" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleEditMember" prefHeight="35.0" styleClass="btn-secondary" text="📝" />
+                  <Button fx:id="deleteMemberBtn" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleDeleteMember" prefHeight="35.0" styleClass="btn-danger" text="❌ " />
                </children>
             </HBox>
             

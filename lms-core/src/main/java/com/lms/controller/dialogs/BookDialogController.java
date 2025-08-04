@@ -80,8 +80,7 @@ public class BookDialogController implements Initializable {
         
         // Set up authors field placeholder
         authorsField.setPromptText("Enter author names separated by commas\ne.g., Nice Stella, Andy Miguel");
-       authorsField.setStyle("-fx-text-fill: #ffffffff;");
-          notesArea.setStyle("-fx-text-fill: #ffffffff;");
+        
         // Set up other field prompts
         titleField.setPromptText("Enter book title");
         pagesField.setPromptText("N0 pages");

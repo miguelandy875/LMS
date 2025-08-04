@@ -74,14 +74,6 @@
                 <mainClass>com.lms.util.SampleDataCreator</mainClass>
             </configuration>
         </execution>
-        <execution>
-            <!-- Configuration for db-setup -->
-            <!-- Usage: mvn clean javafx:run@db-setup -->
-            <id>db-setup</id>
-            <configuration>
-                <mainClass>com.lms.util.DatabaseSetup</mainClass>
-            </configuration>
-        </execution>
     </executions>
 </plugin>
             

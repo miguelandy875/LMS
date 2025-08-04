@@ -92,16 +92,118 @@
     -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #bd2130 0%, #b21f2d 100%);
 }
 
+/* Enhanced Dialog Styling */
+.dialog-combo {
+    -fx-pref-height: 40;
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
 
+.dialog-combo:focused {
+    -fx-border-color: #667eea;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+}
+
+.dialog-date-picker {
+    -fx-pref-height: 40;
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.dialog-date-picker:focused {
+    -fx-border-color: #667eea;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+}
+
+.dialog-spinner {
+    -fx-pref-height: 40;
+    -fx-font-size: 14px;
+}
+
+.dialog-textarea {
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.dialog-textarea:focused {
+    -fx-border-color: #667eea;
+    -fx-border-width: 2;
+    -fx-background-color: white;
+}
+
+.info-label {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.info-value {
+    -fx-text-fill: #495057;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+.info-value-warning {
+    -fx-text-fill: #dc3545;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.status-badge {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-padding: 5 12 5 12;
+    -fx-background-radius: 20;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.warning-section {
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffeaa7;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.info-section {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
+.info-grid {
+    -fx-padding: 10 0 0 0;
+}
 
 /* ===========================================LOAN RELATED STYLE-END================================================ */
 
-/* Module Container */
-.module-container {
-    -fx-background-color: #23272e;
 
-   
-}
 
 /* Module Header */
 .module-header {
@@ -1158,4 +1260,309 @@
     -fx-font-size: 12px;
     -fx-padding: 8 12 8 12;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+/* Tab pane styling */
+
+.dark-tab-pane {
+    -fx-background-color: #2b2b2b;
+       -fx-background-radius: 8px;
+      
+}
+
+/* Tab header area background */
+.dark-tab-pane .tab-header-area {
+   -fx-background-color: #404040;
+      -fx-background-radius: 4px 4px 4px 4px;
+     
+   
+
+}
+
+/* Tab header background */
+.dark-tab-pane .tab-header-background {
+    -fx-background-color: #404040;
+     
+   
+      -fx-background-radius: 4px 4px 4px 4px;
+     
+}
+
+/* Inactive tabs */
+.dark-tab-pane .tab {
+    -fx-background-color: #404040;
+    -fx-text-fill: #cccccc;
+    -fx-background-radius: 8px 8px 0px 0px;
+    -fx-padding: 10px;
+    
+}
+
+/* Active/Selected tab */
+.dark-tab-pane .tab:selected {
+       -fx-background-color: #23272e;
+    -fx-text-fill: white;
+     -fx-border-color: #23272e;
+       -fx-border-width: 1px;
+      -fx-background-radius: 8px 8px 0px 0px;   
+      -fx-border-radius: 8px 8px 0px 0px;
+   
+
+}
+
+/* Tab labels inherit parent color */
+.dark-tab-pane .tab .tab-label {
+    -fx-text-fill: inherit;
+}
+
+/* Content area - this creates the border around the content */
+.dark-tab-pane .tab-content-area {
+    -fx-background-color: #23272e;
+  
+    -fx-background-radius: 0px 0px 8px 8px;
+      
+}
+
+/* Reservation Status Row Styling */
+.reservation-active {
+    -fx-background-color: #f0f8ff;
+    -fx-border-color: #17a2b8;
+    -fx-border-width: 0 0 0 3;
+}
+
+.reservation-expired {
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffc107;
+    -fx-border-width: 0 0 0 3;
+}
+
+.reservation-fulfilled {
+    -fx-background-color: #d4edda;
+    -fx-border-color: #28a745;
+    -fx-border-width: 0 0 0 3;
+}
+
+.reservation-cancelled {
+    -fx-background-color: #f8d7da;
+    -fx-border-color: #dc3545;
+    -fx-border-width: 0 0 0 3;
+    -fx-opacity: 0.8;
+}
+
+/* Seat Reservation Status Styling */
+.seat-reservation-active {
+    -fx-background-color: #e7f3ff;
+    -fx-border-color: #0066cc;
+    -fx-border-width: 0 0 0 3;
+}
+
+.seat-reservation-ongoing {
+    -fx-background-color: #d4edda;
+    -fx-border-color: #28a745;
+    -fx-border-width: 0 0 0 3;
+}
+
+.seat-reservation-upcoming {
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffc107;
+    -fx-border-width: 0 0 0 3;
+}
+
+.seat-reservation-completed {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #6c757d;
+    -fx-border-width: 0 0 0 3;
+    -fx-opacity: 0.8;
+}
+
+.seat-reservation-cancelled {
+    -fx-background-color: #f8d7da;
+    -fx-border-color: #dc3545;
+    -fx-border-width: 0 0 0 3;
+    -fx-opacity: 0.8;
+}
+
+/* Enhanced Button Styles */
+.btn-success {
+    -fx-background-color: linear-gradient(to bottom right, #28a745 0%, #20c997 100%);
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);
+}
+
+.btn-success:hover {
+    -fx-background-color: linear-gradient(to bottom right, #218838 0%, #1e7e34 100%);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 12, 0, 0, 3);
+}
+
+/* Statistics Card Enhancements */
+.stat-card-primary {
+    -fx-background-color: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card-info {
+    -fx-background-color: linear-gradient(to bottom right, #17a2b8 0%, #20c997 100%);
+}
+
+.stat-card-warning {
+    -fx-background-color: linear-gradient(to bottom right, #ffc107 0%, #fd7e14 100%);
+}
+
+.stat-card-success {
+    -fx-background-color: linear-gradient(to bottom right, #28a745 0%, #20c997 100%);
+}
+
+.stat-card-secondary {
+    -fx-background-color: linear-gradient(to bottom right, #6c757d 0%, #495057 100%);
+}
+
+.stat-card-danger {
+    -fx-background-color: linear-gradient(to bottom right, #dc3545 0%, #c82333 100%);
+}
+
+/* Table Row Factories for Reservations */
+.data-table .table-row-cell.reservation-active {
+    -fx-background-color: #f0f8ff;
+    -fx-border-color: #17a2b8;
+    -fx-border-width: 0 0 0 3;
+}
+
+.data-table .table-row-cell.reservation-expired {
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffc107;
+    -fx-border-width: 0 0 0 3;
+}
+
+.data-table .table-row-cell.reservation-fulfilled {
+    -fx-background-color: #d4edda;
+    -fx-border-color: #28a745;
+    -fx-border-width: 0 0 0 3;
+}
+
+.data-table .table-row-cell.reservation-cancelled {
+    -fx-background-color: #f8d7da;
+    -fx-border-color: #dc3545;
+    -fx-border-width: 0 0 0 3;
+    -fx-opacity: 0.8;
+}
+
+
+
+
+
+
+/* File: src/main/resources/styles/modules.css (Additional fixes) */
+
+/* Fix for scroll pane and container width issues */
+.scroll-pane {
+    -fx-fit-to-width: true;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+}
+
+.module-container {
+      -fx-background-color: #23272e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 20, 0, 0, 5);
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+}
+
+/* Statistics container fixes */
+.stats-container {
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+}
+
+.stat-card {
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+    -fx-min-width: 150;
+}
+
+/* Filter section fixes */
+.filter-section {
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+}
+
+/* Table section fixes */
+.table-section {
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+}
+
+.data-table {
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+}
+
+/* Remove any fixed widths that might cause spacing issues */
+.module-header, .table-actions, .pagination-section {
+    -fx-max-width: infinity;
+    -fx-pref-width: -1;
+}
+
+/* Ensure proper column distribution */
+.stats-container > .stat-card {
+    -fx-max-width: infinity;
+}
+
+/* Table column width fixes */
+.data-table .table-column {
+    -fx-pref-width: -1;
+}
+
+/* Remove any margin/padding that might cause wide spaces */
+.module-container > * {
+    -fx-max-width: infinity;
+}
+
+/* Responsive grid fixes */
+@media screen and (max-width: 1200px) {
+    .stats-container {
+        -fx-hgap: 10;
+        -fx-vgap: 10;
+    }
+    
+    .stat-card {
+        -fx-min-width: 120;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .stats-container {
+        -fx-hgap: 8;
+        -fx-vgap: 15;
+    }
+    
+    .stat-card {
+        -fx-min-width: 100;
+    }
+}
+
+/* Dialog container width fixes */
+.dialog-container {
+    -fx-min-width: 500;
+    -fx-pref-width: 600;
+    -fx-max-width: 800;
+}
+
+.dialog-content {
+    -fx-spacing: 20;
+}
+
+.dialog-combo, .dialog-date-picker, .dialog-spinner {
+    -fx-max-width: infinity;
+}
+
+/* Info sections in dialogs */
+.info-section {
+    -fx-min-width: 450;
+    -fx-pref-width: 500;
+}
+
+.info-grid {
+    -fx-hgap: 20;
+    -fx-vgap: 10;
 }

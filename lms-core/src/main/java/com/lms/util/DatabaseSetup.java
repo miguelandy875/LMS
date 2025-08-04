@@ -32,12 +32,12 @@ public class DatabaseSetup {
             
             // Create default admin user
             User admin = new User();
-            admin.setFirstName("System");
-            admin.setLastName("Admin");
+            admin.setFirstName("Andy Miguel");
+            admin.setLastName("Habyarimana");
             admin.setSex("M");
-            admin.setPhone("0276451937");
-            admin.setEmail("admin@lms.lib");
-            admin.setPassword(hashPassword("0909"));
+            admin.setPhone("1234567890");
+            admin.setEmail("miguel@library.com");
+            admin.setPassword(hashPassword("mig123"));
             admin.setRole("ADMIN");
             admin.setStatus("ACTIVE");
             userDAO.save(admin);
@@ -67,7 +67,7 @@ public class DatabaseSetup {
             userDAO.save(member);
             
             System.out.println("Default users created successfully!");
-            System.out.println("Admin: admin@lms.lib / 0909");
+            System.out.println("Admin: miguel@library.com / mig123");
             System.out.println("Librarian: lib@library.com / lib123");
             System.out.println("Member: member@library.com / mem123");
             

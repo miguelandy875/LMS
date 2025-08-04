@@ -86,8 +86,7 @@ public class DashboardController implements Initializable {
                     moduleContent = FXMLLoader.load(getClass().getResource("/fxml/modules/loans.fxml"));
                     break;
                 case "reservations":
-                    moduleContent = loadPlaceholder("Reservation Management", "📝", 
-                        "This module will allow you to:\n• Create book reservations\n• Manage reservation queue\n• Cancel reservations\n• View reservation status\n• Send notifications");
+                    moduleContent = FXMLLoader.load(getClass().getResource("/fxml/modules/reservations.fxml"));
                     break;
                 case "seats":
                     moduleContent = loadPlaceholder("Seat Management", "💺", 

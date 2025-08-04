@@ -116,7 +116,7 @@ stylesheets="@../../styles/modules.css"
                   <!-- Search Field -->
                   <VBox spacing="5.0">
                      <children>
-                        <Label styleClass="filter-label" text="Search Members" />
+                        <Label styleClass="filter-label" text="Search books" />
                         <TextField fx:id="searchField" prefWidth="300.0" styleClass="search-field" />
                      </children>
                   </VBox>
@@ -181,8 +181,8 @@ stylesheets="@../../styles/modules.css"
                         
                         <Button fx:id="refreshButton" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="35.0" styleClass="btn-secondary" text="🔄" />
                         <Button fx:id="viewBookButton" disable="true" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleViewBook" prefHeight="35.0" styleClass="btn-secondary" text="👁" />
-                        <Button fx:id="editBookButton" disable="true" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleEditBook" prefHeight="35.0" styleClass="btn-secondary" text="🖊" />
-                        <Button fx:id="deleteBookButton" disable="true" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleDeleteBook" prefHeight="35.0" styleClass="btn-secondary" text="🗑" />
+                        <Button fx:id="editBookButton" disable="true" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleEditBook" prefHeight="35.0" styleClass="btn-secondary" text="📝" />
+                        <Button fx:id="deleteBookButton" disable="true" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleDeleteBook" prefHeight="35.0" styleClass="btn-danger" text="❌ " />
                      </children>
                   </HBox>
                   

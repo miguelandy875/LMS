@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox spacing="20.0" styleClass="dialog-container" stylesheets="@../../styles/dialogs.css" 
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.lms.controller.dialogs.SeatReservationDetailsDialogController">
+   
+   <!-- Dialog Header -->
+   <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="dialog-header">
+      <children>
+         <Label styleClass="dialog-icon" text="💺" />
+         <VBox>
+            <children>
+               <Label styleClass="dialog-title" text="Seat Reservation Details" />
+               <Label fx:id="reservationIdLabel" styleClass="dialog-subtitle" text="Seat Reservation Details" />
+            </children>
+         </VBox>
+         <Region HBox.hgrow="ALWAYS" />
+         <Label fx:id="statusBadge" styleClass="status-badge" text="ACTIVE" />
+      </children>
+   </HBox>
+   
+   <!-- Reservation Information Content -->
+   <VBox spacing="25.0" styleClass="dialog-content">
+      <children>
+         
+         <!-- Member Information Section -->
+         <VBox spacing="15.0" styleClass="info-section">
+            <children>
+               <Label styleClass="section-title" text="👤 Member Information" />
+               <GridPane hgap="20.0" vgap="10.0" styleClass="info-grid">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="info-label" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="memberNameLabel" styleClass="info-value" text="John Doe" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     
+                     <Label styleClass="info-label" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                     <Label fx:id="memberEmailLabel" styleClass="info-value" text="john.doe@email.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  </children>
+               </GridPane>
+            </children>
+         </VBox>
+         
+         <!-- Seat Information Section -->
+         <VBox spacing="15.0" styleClass="info-section">
+            <children>
+               <Label styleClass="section-title" text="💺 Seat Information" />
+               <GridPane hgap="20.0" vgap="10.0" styleClass="info-grid">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="info-label" text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="seatLocationLabel" styleClass="info-value" text="A-101" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     
+                     <Label styleClass="info-label" text="Type:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                     <Label fx:id="seatTypeLabel" styleClass="info-value" text="STUDY" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  </children>
+               </GridPane>
+            </children>
+         </VBox>
+         
+         <!-- Time Details Section -->
+         <VBox fx:id="timeInfoSection" spacing="15.0" styleClass="info-section">
+            <children>
+               <Label styleClass="section-title" text="⏰ Reservation Time" />
+               <GridPane hgap="20.0" vgap="10.0" styleClass="info-grid">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="120.0" />
+                     <ColumnConstraints hgrow="ALWAYS" />
+                  </columnConstraints>
+                  <children>
+                     <Label styleClass="info-label" text="Start Time:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label fx:id="startTimeLabel" styleClass="info-value" text="Jan 15, 2024 at 09:00" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     
+                     <Label styleClass="info-label" text="End Time:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                     <Label fx:id="endTimeLabel" styleClass="info-value" text="Jan 15, 2024 at 11:00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     
+                     <Label styleClass="info-label" text="Duration:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                     <Label fx:id="durationLabel" styleClass="info-value" text="120 minutes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     
+                     <Label styleClass="info-label" text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                     <Label fx:id="statusInfoLabel" styleClass="info-value" text="Active" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  </children>
+               </GridPane>
+            </children>
+         </VBox>
+         
+      </children>
+   </VBox>
+   <!-- Dialog Buttons -->
+   <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="dialog-buttons">
+      <children>
+         <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleClose" 
+               prefHeight="40.0" prefWidth="100.0" styleClass="dialog-primary-button" text="Close" />
+      </children>
+   </HBox>
+   
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</VBox>
